@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcRJMkpAAAAAJmPaO6fZfJNoiVfjUrJaEzqNLrn"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button class="g-recaptcha"
+                data-sitekey="6LcRJMkpAAAAAJmPaO6fZfJNoiVfjUrJaEzqNLrn"
+                data-callback='onSubmit'
+                data-action='submit'>
+              Submit
+            </button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function onSubmit(token) {
+            const registrationForm = document.getElementById('registrationForm');
+            registrationForm.submit();
+        }
+    </script>
+</body>
+</html>

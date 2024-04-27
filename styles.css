@@ -1,0 +1,31 @@
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#g-recaptcha-response {
+    margin-top: 10px;
+}
